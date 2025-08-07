@@ -82,7 +82,7 @@ def make_call(input: str):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    tools = [send_email , make_call ,send_sms]
+    tools = [ make_call ,send_sms]
     agent = initialize_agent(
         tools,
         llm,
